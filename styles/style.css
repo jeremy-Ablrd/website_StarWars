@@ -257,6 +257,7 @@ nav {
 
 .nb_episode {
   margin: 0px 0;
+  margin-top: 30px;
   padding: 20px 0;
   height: 181px;
   display: flex; }
@@ -351,9 +352,13 @@ nav {
         width: 20px; }
 
 .resume {
+  opacity: 0; }
+
+.resume {
   position: relative;
   background-color: var(--secondary);
   animation-name: wave;
+  animation-delay: 3s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; }
