@@ -1,0 +1,414 @@
+@font-face {
+  font-family: StarWars-Symbole;
+  src: url("../fonts/sf-distant-galaxy-font/SfDistantGalaxySymbols-aylE.ttf") format("TrueType"); }
+
+@font-face {
+  font-family: StarWars-solo;
+  src: url("../fonts/soloist-font/Soloist-Z6M8.otf") format("OpenType"); }
+
+@font-face {
+  font-family: StarWars;
+  src: url("../fonts/sf-distant-galaxy-font/SfDistantGalaxy-0l3d.ttf") format("TrueType"); }
+
+@font-face {
+  font-family: StarWars-episode;
+  src: url("../fonts/sw-font-episode/EPISODE1.TTF") format("TrueType"); }
+
+@font-face {
+  font-family: DidactGothic;
+  src: url("../fonts/Didact_Gothic/DidactGothic-Regular.ttf") format("TrueType"); }
+
+* {
+  box-sizing: border-box; }
+
+:root {
+  --default: white;
+  --default2: black;
+  --main: #F5AA1A;
+  --secondary: #1f1d2f;
+  --complementary: #3300A6;
+  --main2: #fcdc7c;
+  --jedi: #3B97B6;
+  --sith: #F21B54; }
+
+body {
+  background-color: var(--secondary);
+  color: var(--default);
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  min-height: 2000px; }
+
+header {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(2, 0, 36, 0.5) 100%), url(https://secure.parksandresorts.wdpromedia.com/media/disneyparks/blog/wp-content/uploads/2016/07/SWThemedLand.jpg) no-repeat center/cover;
+  display: flex;
+  justify-content: center; }
+
+.hero_section {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* position: relative; */ }
+
+nav {
+  background-color: var(--secondary);
+  height: 50px;
+  opacity: 0.8;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  /* instead fixed for keep spacing with the main content */
+  top: 0px;
+  /* always at the top of the screen */
+  width: 100%;
+  z-index: 3; }
+
+.nav_bar {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .nav_bar span {
+    text-align: center;
+    width: 300px; }
+  .nav_bar a {
+    color: var(--main);
+    font-family: 'StarWars-Symbole';
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px black; }
+    .nav_bar a:hover {
+      font-family: 'StarWars-solo';
+      font-weight: lighter; }
+
+h1 {
+  color: white;
+  font-size: 200px;
+  font-weight: lighter;
+  font-family: 'StarWars-symbole';
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* position: absolute; */ }
+  h1 .title {
+    font-size: 200px;
+    font-weight: lighter;
+    font-family: 'StarWars-symbole';
+    /* position: absolute; */ }
+  h1 .subtitle {
+    font-size: 30px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    font-weight: lighter;
+    font-family: 'StarWars';
+    /* position: absolute; */ }
+
+input {
+  background-color: var(--main); }
+
+section {
+  text-align: center;
+  margin: 20px 5%; }
+  section p {
+    margin: 0; }
+  section .quote {
+    margin-bottom: 20px;
+    font-family: DidactGothic;
+    font-size: 36px; }
+  section h2 {
+    font-family: 'StarWars-solo';
+    font-size: 2em;
+    font-weight: lighter; }
+
+.flex_contener {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10%;
+  gap: 100px; }
+  .flex_contener p {
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 20px; }
+  .flex_contener .side_description {
+    margin: 0;
+    font-size: 200px;
+    font-family: StarWars-Symbole; }
+
+section.skywalker {
+  padding-left: 15px;
+  padding-right: 15px; }
+  section.skywalker .container_showall {
+    display: flex;
+    flex-direction: row;
+    position: relative; }
+    section.skywalker .container_showall button {
+      display: block;
+      color: var(--main);
+      font-family: 'StarWars';
+      font-size: 100px;
+      font-weight: lighter;
+      min-width: 90px;
+      height: 262px;
+      border: none;
+      position: absolute;
+      top: 0%;
+      z-index: 2; }
+      section.skywalker .container_showall button:active {
+        font-size: 90px;
+        color: var(--secondary); }
+    section.skywalker .container_showall #prev {
+      left: 0px;
+      background: linear-gradient(to right, #1f1d2f 0%, rgba(255, 255, 255, 0) 100%); }
+    section.skywalker .container_showall #next {
+      right: 0px;
+      background: linear-gradient(to left, #1f1d2f 0%, rgba(255, 255, 255, 0) 100%); }
+    section.skywalker .container_showall ul#container_movies {
+      padding: 10px;
+      padding-left: 80px;
+      padding-right: 80px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 30px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      box-sizing: inherit; }
+      section.skywalker .container_showall ul#container_movies li.card {
+        background-color: #ca617f;
+        height: 170px;
+        min-width: 310px;
+        list-style-type: none;
+        display: inline-block;
+        border-radius: 10px 10px;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+        position: relative;
+        margin: 10px;
+        transition: 1s; }
+        section.skywalker .container_showall ul#container_movies li.card:hover {
+          height: 340px;
+          padding-bottom: 30px; }
+        section.skywalker .container_showall ul#container_movies li.card .poster {
+          border-radius: 10px 10px;
+          height: 170px;
+          width: 100%;
+          font-size: 50px;
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+          position: absolute;
+          z-index: 1; }
+          section.skywalker .container_showall ul#container_movies li.card .poster img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px; }
+        section.skywalker .container_showall ul#container_movies li.card .description {
+          color: var(--default2);
+          padding: 0px 20px;
+          display: flex;
+          flex-direction: column;
+          bottom: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box !important;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          position: absolute;
+          z-index: 0; }
+          section.skywalker .container_showall ul#container_movies li.card .description .title {
+            font-size: 60px;
+            font-family: StarWars-Symbole; }
+          section.skywalker .container_showall ul#container_movies li.card .description .text {
+            text-align: justify; }
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes border-top {
+  0% {
+    opacity: 0.5;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes border-bottom {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+.header_A {
+  height: 50px;
+  background: url(https://orientxxi.info/IMG/arton4006.jpg?1593602143) no-repeat center/cover; }
+
+nav {
+  background-color: transparent; }
+
+.nb_episode {
+  margin: 0px 0;
+  padding: 20px 0;
+  height: 181px;
+  display: flex; }
+  .nb_episode .full_around_ul {
+    background-color: var(--secondary);
+    width: 100%;
+    right: 0;
+    z-index: 1; }
+  .nb_episode a {
+    height: 100%; }
+  .nb_episode h1.title_A {
+    font-size: 85px;
+    font-family: StarWars-episode;
+    letter-spacing: -3px;
+    border-bottom: 5px;
+    border-top: 5px; }
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+    .nb_episode h1.title_A .letters ul {
+      padding: 0;
+      margin: 20px 0px;
+      list-style-type: none;
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      position: relative; }
+      .nb_episode h1.title_A .letters ul li {
+        margin-top: -40px;
+        margin-bottom: -20px;
+        opacity: 0;
+        animation-name: wave;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards; }
+      .nb_episode h1.title_A .letters ul .label {
+        font-family: StarWars;
+        font-weight: lighter;
+        padding: 0px 3px;
+        position: absolute;
+        font-size: 20px;
+        left: 0;
+        top: 22px;
+        background-color: var(--secondary);
+        z-index: 1;
+        border-bottom-right-radius: 10px;
+        letter-spacing: 0; }
+      .nb_episode h1.title_A .letters ul .border_top {
+        position: absolute;
+        background-color: var(--default);
+        height: 6px;
+        width: 100%;
+        top: 35px;
+        animation-name: border-top;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 2s; }
+      .nb_episode h1.title_A .letters ul .border_bottom {
+        position: absolute;
+        background-color: var(--default);
+        height: 5px;
+        width: 100%;
+        bottom: 15px;
+        animation-name: border-bottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 2s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(3) {
+        animation-delay: 0s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(4) {
+        animation-delay: 0.1s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(5) {
+        animation-delay: 0.2s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(6) {
+        animation-delay: 0.3s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(7) {
+        animation-delay: 0.4s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(8) {
+        animation-delay: 0.5s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(9) {
+        animation-delay: 0.6s; }
+      .nb_episode h1.title_A .letters ul li:nth-child(11) {
+        animation-delay: 0.7s; }
+      .nb_episode h1.title_A .letters ul .space {
+        width: 20px; }
+
+.resume {
+  position: relative;
+  background-color: var(--secondary);
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+  .resume h2 {
+    text-align: left;
+    position: absolute;
+    color: var(--main2);
+    background-color: var(--secondary);
+    padding: 0 10px;
+    top: -45px;
+    left: 15px; }
+  .resume .p_block {
+    text-align: justify;
+    border: 5px solid var(--default);
+    border-radius: 20px 20px;
+    padding: 30px 20px; }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from, to {
+    border-color: var(--main2); }
+  50% {
+    border-color: transparent; } }
+    .resume .p_block p#typing {
+      font-family: StarWars-Symbole;
+      display: inline;
+      border-right: 0.30em solid transparent; }
+    .resume .p_block #button {
+      display: block;
+      margin-left: auto;
+      height: 30px;
+      margin-top: 30px;
+      margin-right: 20px; }
+
+.detail_table {
+  display: flex;
+  justify-content: space-around; }
+  .detail_table .image_page {
+    width: 300px;
+    border-radius: 20px;
+    animation-name: wave;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+
+.anime_translate {
+  animation: typing 10s steps(150, end); }
+
+.anime_blink {
+  animation: blink-caret 0.7s step-end infinite; }
+
+.desable_anime_translate {
+  animation: none !important; }

@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+#typing {
+    display: inline;
+    font-size: 60px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+}
+
+.anime_translate {
+    animation: typing 10s steps(40, end)
+}
+
+.anime_blink {
+    animation: blink-caret 0.7s step-end infinite;
+}
+
+.desable_anime_translate {
+    animation: none !important;
+}
+
+@keyframes typing {
+    from {
+    width: 0;
+    }
+
+    to {
+    width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+    border-color: black;
+    }
+    50% {
+    border-color: transparent;
+    }
+}
+
+#button {
+    height: 30px;
+}
